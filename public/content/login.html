@@ -1,0 +1,24 @@
+<div id="loginPage">
+    <div class="container">
+        <div class="col-sm-4 col-sm-offset-4 loginCard">
+            <form>
+                <h3 class="text-center">Login Here</h3>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" ng-model="loginjson.EMAIL" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control"  ng-model="loginjson.PASSWORD" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary col-sm-12" ng-click="login()">Login</button>
+            </form>
+            <div class="alert alert-danger" ng-if="loginjson.RESPONSE.success == false"style="margin-top:5%">
+                {{loginjson.RESPONSE.message}}
+            </div>
+            <div class="alert alert-success" ng-if="loginjson.RESPONSE.success == true"style="margin-top:5%">
+                {{loginjson.RESPONSE.message}}
+            </div>
+        </div>
+    </div>
+</div>
